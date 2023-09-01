@@ -1,0 +1,15 @@
+$orange: orange;
+$red: red;
+$green: green;
+$gray: #8C8C8C;
+$white: #fff;
+$pink: #BF4080;
+$blue: #6b717f;
+$black: #000;
+
+@for $i from 1 through 5 {
+  li:nth-child(3n + #{$i}) {
+    background-color: lighten($blue, $i * 5%);
+    color: lighten($red, $i * 5%);
+  }
+}

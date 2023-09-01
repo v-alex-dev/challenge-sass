@@ -1,0 +1,104 @@
+@import 'color';
+@import 'padding.scss';
+
+body {
+  font: 100% "Space Mono", monospace;
+  color: $blue;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+main {
+  padding: $padding-reset $padding-general;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+
+  section {
+  flex-grow: 1;
+  flex-basis: 45%;
+  border: 1px $gray solid;
+  -webkit-box-shadow: 10px 10px 15px -4px $blue;
+  -moz-box-shadow: 10px 10px 15px -4px $blue;
+  box-shadow: 10px 10px 15px -4px $blue;
+  padding: $padding-general;
+  margin: 16px;
+  clear: both;
+  overflow: auto;
+  box-sizing: border-box;
+  }
+
+ section#selling-points {
+  flex-grow: 2;
+  flex-basis: 100%;
+  }
+
+ code {
+  background: $black;
+  border: 1px solid $blue;
+  color: $gray;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
+  }
+
+ code.before {
+  float: left;
+  width: 40%;
+  }
+
+ code.after {
+  float: right;
+  width: 40%;
+  }
+}
+h1,
+h2,
+h3 {
+  color: $pink;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: $padding-double;
+  margin-bottom: 0px;
+}
+
+.messages {
+  padding: $padding-general;
+}
+
+.success{
+  @extend .messages;
+  border: 1px solid $gray;
+  color: $white;
+  background-color: $green;
+}
+.error {
+  @extend .success;
+  background-color: $red;
+  &:hover{
+    background-color: $green;
+  }
+}
+
+.warning {
+  @extend .success;
+  background-color: $orange;
+}

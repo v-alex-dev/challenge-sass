@@ -51,16 +51,17 @@ article {
   padding: 1em 1.5em;
   display: block;
   word-wrap: break-word;
-  }
+  
 
- code.before {
-  float: left;
-  width: 40%;
-  }
-
- code.after {
-  float: right;
-  width: 40%;
+    .before {
+      float: left;
+      width: 40%;
+    }
+    
+    .after {
+      float: right;
+      width: 40%;
+    }
   }
 }
 h1,
